@@ -1,1 +1,119 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quesadaddies</title>
+    <link rel="stylesheet" href="Quesadaddies.css"> 
+</head>
+
+<body>
+
+	<section class="Home">
+    <header>
+		<h1>Quesadaddies</h1>
+		<h2><strong>Home</strong><h2>
+	</header>
+	<nav class= "nav">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#menu">Menu</a></li>
+			<li><a href="#Food Ordering">Food Ordering</a></li>
+			<li><a href="#Merch">Merch</a></li>
+			<li><a href="#Reviews">Reviews</a></li>
+			<li><a href="#QA">Q and A</a></li>
+		  </ul>
+	</nav>
+	
+	
+	
+	
+	<table class="schedule">
+	  <tr>
+		<td>08:00 PM to 11:00 PM</td>
+		<td><strong>Wendesday Hours</strong></td>
+	  </tr>
+	  <tr>
+		<td>08:00 PM to 11:00 PM</td>
+		<td><strong>Thursday Hours</strong></td>
+	  </tr>
+	  
+	</table>
+	</section>
+	
+	
+	<section class="Menu">
+	  <h2><strong>Menu</strong></h2>
+		<h4>Quesadillas</h4>
+			<li>
+				<strong>Cheese</strong>
+					<p>Flour tortilla folded over a generous filling of melted cheese, then toasted untill golden brown </p>
+					<span>$2.00</span>
+			</li>
+			<li>
+				<strong>Chicken</strong>
+					<p>Flour tortilla grilled to a golden brown and filled with cheese and tender seasoned pulled chicken</p>
+					<span>$3.00</span>
+			</li>
+		</h4>
+		<h4>Drinks</h4>
+			<li>
+				<strong>Jarritos</strong>
+					<p>Refreshing hispanic origin drink, Flavors offered are Mandarin, Pinapple, Mango, Guave</p>
+					<span>$2.00</span>
+			</li>
+			<li>
+				<strong>Jumex</strong>
+					<p>Directly imported from Mexico, Flavors offered are Strawberry, Banana, Peach </p>
+					<span>$1.50</span>
+			</li>
+		<h4>Deserts</h4>
+			<li>
+				<strong>Chocolate Chip Cookie</strong>
+					<p> </p>
+					<span>$1.50</span>
+			</li>
+			<li>
+				<strong>Cinnamon Roll-Up</strong>
+					<p> </p>
+					<span>$1.00</span>
+			</li>
+		<h4>Sides</h4>
+			<p>$0.50 each or all 4 for $1.50
+			<li>
+				<strong>Salsa</strong>
+					<p>Mild, Medium, or Hot</p>
+					<span>$0.50</span>
+			</li>
+			<li>
+				<strong>Guac</strong>
+					<span>$0.50</span>
+			</li>
+			<li>
+				<strong>Sour Cream</strong>
+					<span>$0.50</span>
+			</li>
+			<li>
+				<strong>White Queso</strong>
+					<span>$0.50</span>
+			</li>
+	</section>
+	
+	
+	<section class="Food Ordering">
+	  <h2><strong>Food Ordering</strong></h2>
+	</section>
+	
+	
+	<section class="Merch">
+	  <h2><strong>Merch</strong></h2>
+	</section>
+	
+	
+	<section class="Reviews">
+	  <h2><strong>Reviews</strong></h2>
+	</section>
+	
+	
+
+
