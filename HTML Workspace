@@ -4,26 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Quesadaddies</title>
-    <link rel="stylesheet" href="Quesadaddies.css"> 
+    <link rel="stylesheet" href="WEBDEB_CSS.css"> 
 </head>
 
 <body>
-
-	<section class="Home">
-    <header>
-		<h1>Quesadaddies</h1>
-		<h2><strong>Home</strong><h2>
-	</header>
-	<nav class= "nav">
-		<ul>
-			<li><a href="#home">Home</a></li>
-			<li><a href="#menu">Menu</a></li>
-			<li><a href="#Food Ordering">Food Ordering</a></li>
-			<li><a href="#Merch">Merch</a></li>
-			<li><a href="#Reviews">Reviews</a></li>
-			<li><a href="#QA">Q and A</a></li>
-		  </ul>
-	</nav>
+	
+	<div class="layout-container">
+        <nav class="sidebar">
+            <img src="IMG_20260226_090455.png" alt="Quesadaddies Logo" width="100%">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#Food Ordering">Food Ordering</a></li>
+                <li><a href="#Merch">Merch</a></li>
+                <li><a href="#Reviews">Reviews</a></li>
+                <li><a href="#QA">Q and A</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <section id="home">
+                </section>
+            
+            <section id="menu">
+                </section>
+        </main>
+    </div>
 	
 	
 	
@@ -116,4 +121,6 @@
 	
 	
 
-
+//need javascript
+//need php,  could do a sever that changes background color based on sun up or down, or if its cloudy or sunny
+	
