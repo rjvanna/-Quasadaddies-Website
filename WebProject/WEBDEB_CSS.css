@@ -13,6 +13,14 @@ h1, h2, h3, h4 {
   font-family: 'Lilita One', cursive;
   letter-spacing: 0.5px;
 }
+.navbar .nav-link{
+	font-family: 'Lilita One', cursive;
+	font-size: 1.25rem;
+}
+
+
+
+
 
 .layout-container {
     display: flex;      
