@@ -171,3 +171,176 @@ h1, h2, h3, h4 {
     border-radius: 0 14px 14px 0; 
     white-space: nowrap;
 }
+        .main-content {
+            scroll-behavior: smooth;
+        }
+        .merch-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .merch-card {
+            background: #FFFDF7;
+            border-radius: 16px;
+            border-left: 5px solid #F39C12;
+            padding: 1.25rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .merch-preview {
+            display: flex;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .merch-img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain;
+            background: #f0ede4;
+        }
+
+        .merch-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .merch-name {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.5rem;
+            color: #2C1A0E;
+            margin: 0;
+        }
+
+        .merch-price {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.3rem;
+            color: #C0392B;
+        }
+
+        .merch-option-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .merch-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #7a6652;
+            min-width: 52px;
+        }
+
+        .color-btn, .design-btn {
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 2px solid #ccc;
+            background: #f0ede4;
+            color: #2C1A0E;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: border-color 0.15s, background 0.15s;
+        }
+
+        .color-btn.active, .design-btn.active {
+            border-color: #F39C12;
+            background: #fff3d6;
+            color: #C0392B;
+        }
+
+        .color-btn:hover, .design-btn:hover {
+            border-color: #F39C12;
+        }
+
+        .merch-select {
+            background: #f0ede4;
+            color: #2C1A0E;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 3px 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .merch-select:focus {
+            outline: none;
+            border-color: #F39C12;
+        }
+        .qty-control {
+            grid-area: price;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .qty-control .price-tag {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.25rem;
+            color: #C0392B;
+            white-space: nowrap;
+        }
+
+        .qty-buttons {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .qty-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid #F39C12;
+            background: transparent;
+            color: #F39C12;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qty-btn:hover {
+            background: #F39C12;
+            color: #2C1A0E;
+        }
+
+        .qty-display {
+            min-width: 24px;
+            text-align: center;
+            font-family: 'Lilita One', cursive;
+            font-size: 1.1rem;
+            color: #2C1A0E; /* dark on menu items (light bg), fine on dark bg too */
+        }
+
+        /* Inside merch cards (light bg), make qty text dark */
+        .merch-card .qty-display {
+            color: #2C1A0E;
+        }
+
+        /* Inside menu items (light bg), qty-btn needs dark-friendly border */
+        .merch-card .qty-btn {
+            border-color: #F39C12;
+            color: #C0392B;
+            background: transparent;
+        }
+
+        .merch-card .qty-btn:hover {
+            background: #F39C12;
+            color: #2C1A0E;
+        }
