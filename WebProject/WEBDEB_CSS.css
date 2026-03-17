@@ -3,30 +3,25 @@
 body {
     margin: 0;
     padding: 0;
-	background: black;
-	font-family: 'Nunito', sans-serif;
-	margin-left:30%;
-	color: white;        
-
+    background: black;
+    font-family: 'Nunito', sans-serif;
+    color: white;        
 }
+
 h1, h2, h3, h4 {
-  font-family: 'Lilita One', cursive;
-  letter-spacing: 0.5px;
-}
-.navbar .nav-link{
-	font-family: 'Lilita One', cursive;
-	font-size: 1.25rem;
+    font-family: 'Lilita One', cursive;
+    letter-spacing: 0.5px;
 }
 
-
-
-
+.navbar .nav-link {
+    font-family: 'Lilita One', cursive;
+    font-size: 1.25rem;
+}
 
 .layout-container {
     display: flex;      
     height: 100vh;     
 }
-
 
 .sidebar {
     position: fixed;     
@@ -40,91 +35,139 @@ h1, h2, h3, h4 {
     box-sizing: border-box; 
 }
 
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 1rem;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sidebar a:hover {
+    color: #F39C12;
+}
+
 .main-content {
+    margin-left: 25%; 
     width: 75%;          
     overflow-y: auto;  
     padding: 40px;
-    background-color: #black;
-	    color: white;        
-
+    background-color: black; 
+    color: white;        
+    box-sizing: border-box; 
 }
 
 .Menu {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
 }
 
 .Menu h2 {
-  font-size: 2.8rem;
-  color: #C0392B;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  position: relative;
+    font-size: 2.8rem;
+    color: #C0392B;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
 }
 
 .Menu h4 {
-  font-size: 1.4rem;
-  color: #5D8233;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 2rem 0 1rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 2px dashed #E8C99A;
+    font-size: 1.4rem;
+    color: #5D8233;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px dashed #E8C99A;
+}
+
+.Menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .Menu li {
-  list-style: none;
-  background: #FFFDF7;
-  border-radius: 14px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 0.75rem;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas:
-    "name  price"
-    "desc  price";
-  align-items: start;
-  gap: 0 1rem;
-  border-left: 5px solid #F39C12;
-  transition: transform 0.2s, box-shadow 0.2s;
+    background: #FFFDF7;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "name  price"
+        "desc  price";
+    align-items: start;
+    gap: 0 1rem;
+    border-left: 5px solid #F39C12;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .Menu li:hover {
-  transform: translateX(4px);
+    transform: translateX(4px);
 }
 
 .Menu li strong {
-  grid-area: name;
-  font-size: 1.1rem;
-  color: #2C1A0E;
+    grid-area: name;
+    font-size: 1.1rem;
+    color: #2C1A0E;
 }
 
 .Menu li p {
-  grid-area: desc;
-  font-size: 0.88rem;
-  color: #7a6652;
-  line-height: 1.4;
-  margin-top: 0.2rem;
+    grid-area: desc;
+    font-size: 0.88rem;
+    color: #7a6652;
+    line-height: 1.4;
+    margin-top: 0.2rem;
 }
 
 .Menu li span {
-  grid-area: price;
-  align-self: center;
-  font-family: 'Lilita One', cursive;
-  font-size: 1.25rem;
-  color: #C0392B;
-  white-space: nowrap;
+    grid-area: price;
+    align-self: center;
+    font-family: 'Lilita One', cursive;
+    font-size: 1.25rem;
+    color: #C0392B;
+    white-space: nowrap;
 }
 
-
 .Menu > p {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #5D8233);
-  background: #eef6e0;
-  border-radius: 8px;
-  padding: 0.4rem 0.9rem;
-  display: inline-block;
-  margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #5D8233; 
+    background: #eef6e0;
+    border-radius: 8px;
+    padding: 0.4rem 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.review {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1.5rem; 
+}
+
+.review td {
+    background-color: #1a1a1a; 
+    padding: 1.5rem;
+}
+
+.review td.quote {
+    font-style: italic;
+    border-radius: 14px 0 0 14px; 
+    line-height: 1.5;
+}
+
+.review td.author {
+    color: #F39C12;
+    text-align: right;
+    border-radius: 0 14px 14px 0; 
+    white-space: nowrap;
 }
