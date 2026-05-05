@@ -390,7 +390,11 @@
 
             </div><!-- /merch-grid -->
 
-            <button onclick="placeOrder()">Place Order</button>
+            <div style="margin-top: 16px;">
+                <input type="text" id="customer-name" placeholder="Your Name" style="padding: 8px; margin-right: 8px; border-radius: 6px; border: 1px solid #ccc;">
+                <input type="tel" id="customer-phone" placeholder="Phone Number" style="padding: 8px; margin-right: 8px; border-radius: 6px; border: 1px solid #ccc;">
+                <button onclick="placeOrder()">Place Order</button>
+            </div>
             <p id="order-message"></p>
 
         </section>
@@ -516,10 +520,13 @@
             return;
         }
 
+        var name = document.getElementById('customer-name').value;
+        var phone = document.getElementById('customer-phone').value;
+
         fetch('http://localhost:3000/order', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ items: items, time: new Date().toLocaleString() })
+            body: JSON.stringify({ name: name, phone: phone, items: items, time: new Date().toLocaleString() })
         })
             .then(function(res) { return res.json(); })
             .then(function(data) {

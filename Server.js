@@ -13,13 +13,14 @@ const db = mysql.createConnection({ host: 'localhost', user: 'root', password: p
 db.connect(err => {
     if (err) throw err;
     console.log('connected to mysql!');
-    db.query(`CREATE TABLE IF NOT EXISTS orders (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), email VARCHAR(255), items TEXT, total VARCHAR(50), created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)`);
+    db.query(`CREATE TABLE IF NOT EXISTS orders (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), phone VARCHAR(50), items TEXT, total VARCHAR(50), created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)`);
+    db.query(`ALTER TABLE orders ADD COLUMN IF NOT EXISTS phone VARCHAR(50)`);
 });
 
 app.post('/order', (req, res) => {
     const o = req.body;
-    db.query('INSERT INTO orders (name, email, items, total) VALUES (?, ?, ?, ?)',
-        [o.name, o.email, JSON.stringify(o.items || o), o.total],
+    db.query('INSERT INTO orders (name, phone, items, total) VALUES (?, ?, ?, ?)',
+        [o.name, o.phone, JSON.stringify(o.items || o), o.total],
         err => err ? res.status(500).json({ success: false }) : res.json({ success: true, message: 'Order saved!' })
     );
 });
