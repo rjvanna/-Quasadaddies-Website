@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quesadaddies</title>
+    <link rel="stylesheet" href="WEBDEB_CSS.css">
+</head>
+
+<body>
+
+<div class="layout-container">
+
+    <nav class="sidebar">
+        <img src="IMG_20260226_090455.png" alt="Quesadaddies Logo" width="100%">
+        <ul>
+            <li><a href="#home" onclick="smoothScroll('home', event)">Home</a></li>
+            <li><a href="#menu" onclick="smoothScroll('menu', event)">Menu</a></li>
+            <li><a href="#ordering" onclick="smoothScroll('ordering', event)">Food Ordering</a></li>
+            <li><a href="#merch" onclick="smoothScroll('merch', event)">Merch</a></li>
+            <li><a href="#reviews" onclick="smoothScroll('reviews', event)">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content" id="mainContent">
+
+        <section id="home">
+            <h2>Welcome to Quesadaddies</h2>
+            <table class="schedule">
+                <tr>
+                    <td>08:00 PM to 11:00 PM</td>
+                    <td><strong>Wednesday Hours</strong></td>
+                </tr>
+                <tr>
+                    <td>08:00 PM to 11:00 PM</td>
+                    <td><strong>Thursday Hours</strong></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ===== MENU SECTION ===== -->
+        <section id="menu" class="Menu">
+            <h2><strong>Menu</strong></h2>
+
+            <h4>Quesadillas</h4>
+            <ul>
+                <li>
+                    <strong>Cheese</strong>
+                    <p>Flour tortilla folded over a generous filling of melted cheese, then toasted until golden brown</p>
+                    <span>$2.00</span>
+                </li>
+                <li>
+                    <strong>Chicken</strong>
+                    <p>Flour tortilla grilled to a golden brown and filled with cheese and tender seasoned pulled chicken</p>
+                    <span>$3.00</span>
+                </li>
+            </ul>
+
+            <h4>Drinks</h4>
+            <ul>
+                <li>
+                    <strong>Jarritos</strong>
+                    <p>Refreshing Hispanic origin drink. Flavors offered: Mandarin, Pineapple, Mango, Guava</p>
+                    <span>$2.00</span>
+                </li>
+                <li>
+                    <strong>Jumex</strong>
+                    <p>Directly imported from Mexico. Flavors offered: Strawberry, Banana, Peach</p>
+                    <span>$1.50</span>
+                </li>
+            </ul>
+
+            <h4>Desserts</h4>
+            <ul>
+                <li>
+                    <strong>Chocolate Chip Cookie</strong>
+                    <p>&nbsp;</p>
+                    <span>$1.50</span>
+                </li>
+                <li>
+                    <strong>Cinnamon Roll-Up</strong>
+                    <p>&nbsp;</p>
+                    <span>$1.00</span>
+                </li>
+            </ul>
+
+            <h4>Sides</h4>
+            <p>$0.50 each or all 4 for $1.50</p>
+            <ul>
+                <li>
+                    <strong>Salsa</strong>
+                    <p>Mild, Medium, or Hot</p>
+                    <span>$0.50</span>
+                </li>
+                <li>
+                    <strong>Guac</strong>
+                    <p>&nbsp;</p>
+                    <span>$0.50</span>
+                </li>
+                <li>
+                    <strong>Sour Cream</strong>
+                    <p>&nbsp;</p>
+                    <span>$0.50</span>
+                </li>
+                <li>
+                    <strong>White Queso</strong>
+                    <p>&nbsp;</p>
+                    <span>$0.50</span>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- ===== FOOD ORDERING SECTION ===== -->
+        <section id="ordering" class="Menu">
+            <h2><strong>Food Ordering</strong></h2>
+
+            <h4>Quesadillas</h4>
+            <ul>
+                <li>
+                    <strong>Cheese</strong>
+                    <p>Flour tortilla folded over a generous filling of melted cheese, then toasted until golden brown</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$2.00</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>Chicken</strong>
+                    <p>Flour tortilla grilled to a golden brown and filled with cheese and tender seasoned pulled chicken</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$3.00</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <h4>Drinks</h4>
+            <ul>
+                <li>
+                    <strong>Jarritos</strong>
+                    <p>Refreshing Hispanic origin drink. Flavors offered: Mandarin, Pineapple, Mango, Guava</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$2.00</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>Jumex</strong>
+                    <p>Directly imported from Mexico. Flavors offered: Strawberry, Banana, Peach</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$1.50</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <h4>Desserts</h4>
+            <ul>
+                <li>
+                    <strong>Chocolate Chip Cookie</strong>
+                    <p>&nbsp;</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$1.50</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>Cinnamon Roll-Up</strong>
+                    <p>&nbsp;</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$1.00</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <h4>Sides</h4>
+            <p>$0.50 each or all 4 for $1.50</p>
+            <ul>
+                <li>
+                    <strong>Salsa</strong>
+                    <p>Mild, Medium, or Hot</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$0.50</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>Guac</strong>
+                    <p>&nbsp;</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$0.50</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>Sour Cream</strong>
+                    <p>&nbsp;</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$0.50</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <strong>White Queso</strong>
+                    <p>&nbsp;</p>
+                    <div class="qty-control">
+                        <span class="price-tag">$0.50</span>
+                        <div class="qty-buttons">
+                            <button class="qty-btn" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">0</span>
+                            <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ===== MERCH SECTION ===== -->
+        <section id="merch" class="Menu">
+            <h2><strong>Merch</strong></h2>
+
+            <div class="merch-grid">
+
+                <!-- HOODIE -->
+                <div class="merch-card" data-item="hoodie">
+                    <div class="merch-preview">
+                        <img class="merch-img" id="hoodie-img-front"
+                             src="BlackhoodFLG.png" alt="Hoodie Front">
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-name">Hoodie</h3>
+                        <span class="merch-price">$20.00</span>
+
+                        <!-- Color -->
+                        <div class="merch-option-row">
+                            <span class="merch-label">Color:</span>
+                            <button class="color-btn active" data-item="hoodie" data-color="Black" onclick="setColor(this)">Black</button>
+                            <button class="color-btn" data-item="hoodie" data-color="White" onclick="setColor(this)">White</button>
+                        </div>
+
+                        <!-- Design -->
+                        <div class="merch-option-row">
+                            <span class="merch-label">Design:</span>
+                            <button class="design-btn active" data-item="hoodie" data-design="FLG" onclick="setDesign(this)">Flag</button>
+                            <button class="design-btn" data-item="hoodie" data-design="chz" onclick="setDesign(this)">Cheesy</button>
+                            <button class="design-btn" data-item="hoodie" data-design="noback" onclick="setDesign(this)">Logo Only</button>
+                        </div>
+
+                        <!-- Size -->
+                        <div class="merch-option-row">
+                            <span class="merch-label">Size:</span>
+                            <select class="merch-select">
+                                <option>S</option><option>M</option><option selected>L</option>
+                                <option>XL</option><option>2XL</option>
+                            </select>
+                        </div>
+
+                        <!-- Qty -->
+                        <div class="merch-option-row">
+                            <span class="merch-label">Qty:</span>
+                            <div class="qty-buttons">
+                                <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
+                                <span class="qty-display">0</span>
+                                <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- T-SHIRT -->
+                <div class="merch-card" data-item="tshirt">
+                    <div class="merch-preview">
+                        <img class="merch-img" id="tshirt-img-front"
+                             src="BlackTshirtFLG.png" alt="T-Shirt Front">
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-name">T-Shirt</h3>
+                        <span class="merch-price">$15.00</span>
+
+                        <div class="merch-option-row">
+                            <span class="merch-label">Color:</span>
+                            <button class="color-btn active" data-item="tshirt" data-color="Black" onclick="setColor(this)">Black</button>
+                            <button class="color-btn" data-item="tshirt" data-color="White" onclick="setColor(this)">White</button>
+                        </div>
+
+                        <div class="merch-option-row">
+                            <span class="merch-label">Design:</span>
+                            <button class="design-btn active" data-item="tshirt" data-design="FLG" onclick="setDesign(this)">Flag</button>
+                            <button class="design-btn" data-item="tshirt" data-design="chz" onclick="setDesign(this)">Cheesy</button>
+                            <button class="design-btn" data-item="tshirt" data-design="noback" onclick="setDesign(this)">Logo Only</button>
+                        </div>
+
+                        <div class="merch-option-row">
+                            <span class="merch-label">Size:</span>
+                            <select class="merch-select">
+                                <option>S</option><option>M</option><option selected>L</option>
+                                <option>XL</option><option>2XL</option>
+                            </select>
+                        </div>
+
+                        <div class="merch-option-row">
+                            <span class="merch-label">Qty:</span>
+                            <div class="qty-buttons">
+                                <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
+                                <span class="qty-display">0</span>
+                                <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TANK TOP -->
+                <div class="merch-card" data-item="tank">
+                    <div class="merch-preview">
+                        <img class="merch-img" id="tank-img-front"
+                             src="BlackFLGTT.png" alt="Tank Top Front">
+                    </div>
+                    <div class="merch-info">
+                        <h3 class="merch-name">Tank Top</h3>
+                        <span class="merch-price">$12.00</span>
+
+                        <div class="merch-option-row">
+                            <span class="merch-label">Color:</span>
+                            <button class="color-btn active" data-item="tank" data-color="Black" onclick="setColor(this)">Black</button>
+                            <button class="color-btn" data-item="tank" data-color="White" onclick="setColor(this)">White</button>
+                        </div>
+
+                        <div class="merch-option-row">
+                            <span class="merch-label">Design:</span>
+                            <button class="design-btn active" data-item="tank" data-design="FLG" onclick="setDesign(this)">Flag</button>
+                            <button class="design-btn" data-item="tank" data-design="Chz" onclick="setDesign(this)">Cheesy</button>
+                            <button class="design-btn" data-item="tank" data-design="noback" onclick="setDesign(this)">Logo Only</button>
+                        </div>
+
+                        <div class="merch-option-row">
+                            <span class="merch-label">Size:</span>
+                            <select class="merch-select">
+                                <option>S</option><option>M</option><option selected>L</option>
+                                <option>XL</option><option>2XL</option>
+                            </select>
+                        </div>
+
+                        <div class="merch-option-row">
+                            <span class="merch-label">Qty:</span>
+                            <div class="qty-buttons">
+                                <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
+                                <span class="qty-display">0</span>
+                                <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /merch-grid -->
+
+            <button onclick="placeOrder()">Place Order</button>
+            <p id="order-message"></p>
+
+        </section>
+
+        <!-- ===== REVIEWS SECTION ===== -->
+        <section id="reviews" class="Menu">
+            <h2><strong>Reviews</strong></h2>
+            <table class="review">
+                <tr>
+                    <td class="quote">"Best thing to happen to JBU since Chip Pollard. It's the perfect snack/meal when you're studying late at night or just chilling with friends."</td>
+                    <td class="author"><strong>--Aidan Ashlock</strong></td>
+                </tr>
+                <tr>
+                    <td class="quote">"Eating these quesadillas makes you feel at home and touches your inner core. It's a mind blowing experience and you need to try quesadaddies"</td>
+                    <td class="author"><strong>--Kyoshi</strong></td>
+                </tr>
+                <tr>
+                    <td class="quote">"Whenever Wednesdays and Thursdays roll around and my girlfriend is hungry from rehearsals, there is one bright shining beacon in this world of darkness. That beacon is the Quesadaddies. Their food is always fantastic, and their food is unmatched. 5 stars, will be eating again."</td>
+                    <td class="author"><strong>--Jon Sims</strong></td>
+                </tr>
+                <tr>
+                    <td class="quote">"As a forever J Alvin man, I look back on my freshman year, thinking about all the times I wish I could have had a delicious quesadilla. Luckily now I can and so can you. From cheesy snacks to sweet treats, the quesadaddies do it all."</td>
+                    <td class="author"><strong>--Yamil T.</strong></td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+</div>
+
+<script>
+    const merchImages = {
+        hoodie: {
+            Black: { FLG: 'BlackhoodFLG.png',  chz: 'Blackhoodchz.png',  noback: 'BlackHoodnoback.png' },
+            White: { FLG: 'WhitehoodFLG.png',  chz: 'Whitehoodchz.png',  noback: 'WhiteHoodnoback.png' }
+        },
+        tshirt: {
+            Black: { FLG: 'BlackTshirtFLG.png', chz: 'BlackTshirtchz.png', noback: 'BlackTshirtnoback.png' },
+            White: { FLG: 'WhiteTshirtFLG.png', chz: 'WhiteTshirtChez.png', noback: 'WhiteTshirtnoback.png' }
+        },
+        tank: {
+            Black: { FLG: 'BlackFLGTT.png', Chz: 'BlackChzTT.png', noback: 'BlackTTnoback.png' },
+            White: { FLG: 'WhiteFLGTT.png', Chz: 'WhiteChezTT.png', noback: 'WhiteTTnoback.png' }
+        }
+    };
+    const merchState = {
+        hoodie: { color: 'Black', design: 'FLG' },
+        tshirt: { color: 'Black', design: 'FLG' },
+        tank:   { color: 'Black', design: 'FLG' }
+    };
+
+    function updateMerchImage(item) {
+        const state = merchState[item];
+        const src = merchImages[item][state.color][state.design];
+        document.getElementById(item + '-img-front').src = src;
+        document.getElementById(item + '-img-back').src = src;
+    }
+
+    function setColor(btn) {
+        const item = btn.dataset.item;
+        const color = btn.dataset.color;
+        // update active state
+        btn.closest('.merch-option-row').querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        merchState[item].color = color;
+        updateMerchImage(item);
+    }
+
+    function setDesign(btn) {
+        const item = btn.dataset.item;
+        const design = btn.dataset.design;
+        btn.closest('.merch-option-row').querySelectorAll('.design-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        merchState[item].design = design;
+        updateMerchImage(item);
+    }
+
+    function smoothScroll(id, event) {
+        event.preventDefault();
+        const mainContent = document.getElementById('mainContent');
+        const target = document.getElementById(id);
+        if (target) {
+            mainContent.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    function changeQty(btn, delta) {
+        const display = btn.parentElement.querySelector('.qty-display');
+        let current = parseInt(display.textContent) || 0;
+        current = Math.max(0, current + delta);
+        display.textContent = current;
+    }
+
+    function placeOrder() {
+        var items = [];
+
+        var foodCards = document.querySelectorAll('.menu-item');
+        for (var i = 0; i < foodCards.length; i++) {
+            var name = foodCards[i].querySelector('h3').textContent;
+            var qty = parseInt(foodCards[i].querySelector('.qty-display').textContent);
+            if (qty > 0) {
+                items.push({ name: name, qty: qty });
+            }
+        }
+
+        var merchCards = document.querySelectorAll('.merch-card');
+        for (var i = 0; i < merchCards.length; i++) {
+            var name = merchCards[i].querySelector('.merch-name').textContent;
+            var qty = parseInt(merchCards[i].querySelector('.qty-display').textContent);
+            if (qty > 0) {
+                var color = merchCards[i].querySelector('.color-btn.active').textContent;
+                var design = merchCards[i].querySelector('.design-btn.active').textContent;
+                var size = merchCards[i].querySelector('.merch-select').value;
+                items.push({ name: name, qty: qty, color: color, design: design, size: size });
+            }
+        }
+
+        if (items.length == 0) {
+            document.getElementById('order-message').textContent = 'Add something first!';
+            return;
+        }
+
+        fetch('http://localhost:3000/order', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ items: items, time: new Date().toLocaleString() })
+        })
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                document.getElementById('order-message').textContent = 'Order recieved!';
+            })
+            .catch(function() {
+                document.getElementById('order-message').textContent = 'Server not connected!';
+            });
+    }
+</script>
+
+</body>
+</html>

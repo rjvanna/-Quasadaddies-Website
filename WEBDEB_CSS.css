@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    font-family: 'Nunito', sans-serif;
+    color: white;        
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lilita One', cursive;
+    letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+    font-family: 'Lilita One', cursive;
+    font-size: 1.25rem;
+}
+
+.layout-container {
+    display: flex;      
+    height: 100vh;     
+}
+
+.sidebar {
+    position: fixed;     
+    top: 0;              
+    left: 0;             
+    width: 25%;          
+    height: 100%;        
+    background-color: #3B3A30; 
+    color: white;        
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 1rem;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sidebar a:hover {
+    color: #F39C12;
+}
+
+.main-content {
+    margin-left: 25%; 
+    width: 75%;          
+    overflow-y: auto;  
+    padding: 40px;
+    background-color: black; 
+    color: white;        
+    box-sizing: border-box; 
+}
+
+.Menu {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.Menu h2 {
+    font-size: 2.8rem;
+    color: #C0392B;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.Menu h4 {
+    font-size: 1.4rem;
+    color: #5D8233;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px dashed #E8C99A;
+}
+
+.Menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Menu li {
+    background: #FFFDF7;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "name  price"
+        "desc  price";
+    align-items: start;
+    gap: 0 1rem;
+    border-left: 5px solid #F39C12;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Menu li:hover {
+    transform: translateX(4px);
+}
+
+.Menu li strong {
+    grid-area: name;
+    font-size: 1.1rem;
+    color: #2C1A0E;
+}
+
+.Menu li p {
+    grid-area: desc;
+    font-size: 0.88rem;
+    color: #7a6652;
+    line-height: 1.4;
+    margin-top: 0.2rem;
+}
+
+.Menu li span {
+    grid-area: price;
+    align-self: center;
+    font-family: 'Lilita One', cursive;
+    font-size: 1.25rem;
+    color: #C0392B;
+    white-space: nowrap;
+}
+
+.Menu > p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #5D8233; 
+    background: #eef6e0;
+    border-radius: 8px;
+    padding: 0.4rem 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.review {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1.5rem; 
+}
+
+.review td {
+    background-color: #1a1a1a; 
+    padding: 1.5rem;
+}
+
+.review td.quote {
+    font-style: italic;
+    border-radius: 14px 0 0 14px; 
+    line-height: 1.5;
+}
+
+.review td.author {
+    color: #F39C12;
+    text-align: right;
+    border-radius: 0 14px 14px 0; 
+    white-space: nowrap;
+}
+        .main-content {
+            scroll-behavior: smooth;
+        }
+        .merch-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .merch-card {
+            background: #FFFDF7;
+            border-radius: 16px;
+            border-left: 5px solid #F39C12;
+            padding: 1.25rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .merch-preview {
+            display: flex;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .merch-img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain;
+            background: #f0ede4;
+        }
+
+        .merch-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .merch-name {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.5rem;
+            color: #2C1A0E;
+            margin: 0;
+        }
+
+        .merch-price {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.3rem;
+            color: #C0392B;
+        }
+
+        .merch-option-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .merch-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #7a6652;
+            min-width: 52px;
+        }
+
+        .color-btn, .design-btn {
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 2px solid #ccc;
+            background: #f0ede4;
+            color: #2C1A0E;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: border-color 0.15s, background 0.15s;
+        }
+
+        .color-btn.active, .design-btn.active {
+            border-color: #F39C12;
+            background: #fff3d6;
+            color: #C0392B;
+        }
+
+        .color-btn:hover, .design-btn:hover {
+            border-color: #F39C12;
+        }
+
+        .merch-select {
+            background: #f0ede4;
+            color: #2C1A0E;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 3px 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .merch-select:focus {
+            outline: none;
+            border-color: #F39C12;
+        }
+        .qty-control {
+            grid-area: price;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .qty-control .price-tag {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.25rem;
+            color: #C0392B;
+            white-space: nowrap;
+        }
+
+        .qty-buttons {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .qty-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid #F39C12;
+            background: transparent;
+            color: #F39C12;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qty-btn:hover {
+            background: #F39C12;
+            color: #2C1A0E;
+        }
+
+        .qty-display {
+            min-width: 24px;
+            text-align: center;
+            font-family: 'Lilita One', cursive;
+            font-size: 1.1rem;
+            color: #2C1A0E; /* dark on menu items (light bg), fine on dark bg too */
+        }
+
+        /* Inside merch cards (light bg), make qty text dark */
+        .merch-card .qty-display {
+            color: #2C1A0E;
+        }
+
+        /* Inside menu items (light bg), qty-btn needs dark-friendly border */
+        .merch-card .qty-btn {
+            border-color: #F39C12;
+            color: #C0392B;
+            background: transparent;
+        }
+
+        .merch-card .qty-btn:hover {
+            background: #F39C12;
+            color: #2C1A0E;
+        }
